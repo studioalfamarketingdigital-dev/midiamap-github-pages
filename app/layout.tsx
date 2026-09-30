@@ -1,0 +1,5 @@
+import type { Metadata, Viewport } from 'next';
+import './globals.css';
+export const metadata: Metadata={metadataBase:new URL('https://midiamap.studioalfamkt.online'),title:{default:'MídiaMap | Marketplace de mídia OOH e DOOH',template:'%s | MídiaMap'},description:'Encontre outdoors, painéis LED, mídia indoor e espaços publicitários por localização. MídiaMap é um produto S.Alfa MKT.',keywords:['mídia OOH','DOOH','outdoor','painel LED','mídia exterior','publicidade','marketplace de mídia'],manifest:'/manifest.webmanifest',alternates:{canonical:'/'},openGraph:{title:'MídiaMap | Sua marca onde importa',description:'Marketplace de mídia OOH e DOOH.',url:'https://midiamap.studioalfamkt.online',siteName:'MídiaMap',locale:'pt_BR',type:'website'},robots:{index:true,follow:true,googleBot:{index:true,follow:true,'max-image-preview':'large'}}};
+export const viewport:Viewport={themeColor:'#19c77a',width:'device-width',initialScale:1};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="pt-BR"><body>{children}</body></html>}
