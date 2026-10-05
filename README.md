@@ -2,29 +2,54 @@
 
 Marketplace de mídia e publicidade da S.Alfa MKT.
 
-## Domínio
-https://midiamap.studioalfamkt.online
+> Toda mídia. Em um só mapa.
 
-## Stack
-Next.js + TypeScript + CSS. Preparado para deploy na Vercel.
+## O projeto
 
-## Hospedagem no GitHub Pages
-1. Com o GitHub CLI logado (`gh auth login`), dentro desta pasta:
-   `git init -b main && git add . && git commit -m "MídiaMap" && gh repo create midiamap --public --source=. --push`
-2. No repositório: Settings > Pages > Build and deployment > Source: **GitHub Actions**.
-3. O workflow `.github/workflows/pages.yml` compila e publica a cada push na `main`.
-4. Domínio: o arquivo `public/CNAME` já aponta para `midiamap.studioalfamkt.online`. No DNS de `studioalfamkt.online`, crie um registro CNAME do subdomínio `midiamap` para `SEU-USUARIO.github.io`, e depois marque "Enforce HTTPS" em Settings > Pages.
-5. Valide `/robots.txt` e `/sitemap.xml` e cadastre o sitemap no Google Search Console.
+O MídiaMap conecta anunciantes, agências, empresas e proprietários de espaços publicitários. A experiência inicial inclui mapa visual, busca, filtros e inventário demonstrativo para outdoor, painéis LED, DOOH e indoor.
 
-Obs.: o GitHub Pages gratuito exige repositório público (ou plano pago para privado).
+## Executar localmente
 
-## Próxima fase
-- inventário real via banco/API;
-- mapa interativo e geolocalização;
-- filtros por cidade, formato, período e preço;
-- cadastro de exibidores;
-- disponibilidade/reserva;
-- checkout e pagamento;
-- painel do anunciante;
-- painel do proprietário de mídia;
-- integração com parceiros de OOH, DOOH, TV e rádio.
+```bash
+npm install
+npm run dev
+```
+
+Abra `http://localhost:3000`.
+
+## Validar produção
+
+```bash
+npm ci
+npm run build
+npm run start
+```
+
+O build usa exportação estática e gera a pasta `out/`.
+
+## GitHub Pages
+
+O workflow em `.github/workflows/pages.yml` compila e publica automaticamente a branch `main` usando GitHub Actions.
+
+No repositório, configure **Settings → Pages → Source: GitHub Actions**. O arquivo `public/CNAME` aponta para `midiamap.studioalfamkt.online`.
+
+Para o DNS, o subdomínio `midiamap` deve apontar para:
+
+```text
+studioalfamarketingdigital-dev.github.io
+```
+
+## Estrutura
+
+- `app/`: página, layout, SEO e estilos globais.
+- `components/Inventory.tsx`: busca, filtros, mapa e cards do inventário.
+- `lib/spaces.ts`: dados demonstrativos separados da interface.
+- `public/`: CNAME, manifesto e arquivos públicos.
+
+## Próximas fases
+
+- Inventário real via API ou banco de dados.
+- Páginas individuais de mídia.
+- Cadastro de veículos e anunciantes.
+- Disponibilidade, reservas e checkout.
+- Dashboards e integrações com mapas e pagamentos.
