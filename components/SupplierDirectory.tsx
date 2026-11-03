@@ -71,7 +71,7 @@ const suppliers = [
     region: 'Brasília',
     formats: 'Spots, patrocínio de programas, promoções com ouvintes e presença digital.',
     proof: 'A página oficial oferece atendimento comercial para montar plano por objetivo e praça.',
-    contact: 'saa@ligafm.com.br · WhatsApp comercial pelo botão 'Falar com o comercial' no site',
+    contact: 'saa@ligafm.com.br · WhatsApp comercial disponível no site',
     href: 'https://brasilia.ligafm.com.br/',
     action: 'Solicitar mídia kit e tabela',
     tag: 'Comercial direto'
