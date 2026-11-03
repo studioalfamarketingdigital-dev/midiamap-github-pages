@@ -4,10 +4,10 @@ const suppliers = [
     category: 'OOH / DOOH / mobiliário urbano',
     region: 'Brasília e Entorno',
     formats: 'Frontlight, empena, minifront, outdoor, LED, busdoor, indoor e totens.',
-    proof: 'O catálogo público exibe atualmente 356 mídias. Exemplos: empena REF 104 em Águas Claras (11 × 6,7 m), minifront REF 253 em Taguatinga (5 × 2 m) e frontlight REF 254 no acesso à Ponte JK (9 × 3,6 m).',
+    proof: 'O catálogo público exibe 356 mídias. Ponto real identificado: REF 104, empena iluminada de 11 × 6,7 m, na Avenida Castanheiras, em frente à CIA Toy e ao Supermercado Dona de Casa, Águas Claras; sentido Rua Alecrim. Coordenadas do mapa: -15.835408, -48.018370. Preço e disponibilidade sob confirmação do operador.',
     contact: '61 3034-6523 · gbmpublicidade@gmail.com',
-    href: 'https://grupobrasilmidia.com.br/midias',
-    action: 'Abrir catálogo de pontos',
+    href: 'https://grupobrasilmidia.com.br/midias/104',
+    action: 'Ver ficha real do ponto REF 104',
     tag: 'Catálogo público'
   },
   {
