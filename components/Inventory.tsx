@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useMemo, useState } from 'react';
 import { brl, formats, spaces, type Space } from '../lib/spaces';
 import RealMap from './RealMap';
+import { createClient } from '@supabase/supabase-js';
 
 const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 const teamEmail = 'studioalfamktag@bol.com.br';
@@ -32,12 +33,21 @@ export default function Inventory() {
   const closeProposal = () => setSelectedForProposal(null);
   const updateLead = (field: keyof Lead, value: string) => setLead((current) => ({ ...current, [field]: value }));
   const goToReview = (event: FormEvent<HTMLFormElement>) => { event.preventDefault(); setStep(2); };
-  const submitProposal = (event: FormEvent<HTMLFormElement>) => {
+  const submitProposal = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!selectedForProposal) return;
     const subject = `Novo atendimento MídiaMap — ${selectedForProposal.title}`;
     const body = [`Olá, equipe MídiaMap! Quero solicitar uma cotação para esta oportunidade:`, ``, `Mídia: ${selectedForProposal.title}`, `Referência de preço: ${selectedForProposal.price === null ? 'sob consulta' : `${brl(selectedForProposal.price)} / mês (valor publicado pelo operador)`}. Confirmar vigência, disponibilidade e condições.`, ``, `Nome: ${lead.name}`, `Empresa: ${lead.company}`, `WhatsApp: ${lead.whatsapp}`, `E-mail: ${lead.email}`, `Campanha: ${lead.campaign}`, `Período desejado: ${lead.period}`, `Orçamento: ${lead.budget || 'A definir'}`, `Observações: ${lead.message || 'Nenhuma'}`].join('\n');
-    window.location.href = `mailto:${teamEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!);
+    const { error } = await supabase.from('quote_requests').insert({
+      contact_name: lead.name, contact_company: lead.company, contact_email: lead.email,
+      contact_phone: lead.whatsapp, campaign_city: selectedForProposal.city,
+      campaign_state: selectedForProposal.state, desired_format: selectedForProposal.format,
+      budget: null, message: [`Mídia: ${selectedForProposal.title}`, `Período: ${lead.period}`,
+        `Objetivo: ${lead.campaign}`, `Investimento informado: ${lead.budget || 'A definir'}`,
+        lead.message].filter(Boolean).join(' | '), status: 'new', source: 'website'
+    });
+    if (error) { alert('Não foi possível registrar seu pedido. Tente novamente ou fale com nossa equipe.'); return; }
     setSubmitted(true);
   };
 
