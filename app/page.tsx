@@ -55,11 +55,11 @@ export default function Home() {
               <p>Planeje campanhas em diferentes canais e plataformas.</p>
             </div>
             <div className="channel-logos">
-              <div className="channel-logo globo" aria-label="TV Globo"><span className="globo-mark"><i /></span><b>globo</b></div>
-              <div className="channel-logo sbt" aria-label="SBT"><b>sbt</b></div>
-              <div className="channel-logo record" aria-label="Record"><b>RECORD</b></div>
-              <div className="channel-logo netflix" aria-label="Netflix"><img src="https://cdn.simpleicons.org/netflix/E50914" alt="" /><b>NETFLIX</b></div>
-              <div className="channel-logo spotify" aria-label="Spotify"><img src="https://cdn.simpleicons.org/spotify/1DB954" alt="" /><b>Spotify</b></div>
+              <div className="channel-logo" aria-label="TV Globo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/TV_Globo_logo_(April_2025).svg" alt="TV Globo" /></div>
+              <div className="channel-logo" aria-label="SBT"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo_do_SBT_(2025).png" alt="SBT" /></div>
+              <div className="channel-logo" aria-label="Record"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Logomarca_da_Record_(2023).webp" alt="Record" /></div>
+              <div className="channel-logo netflix" aria-label="Netflix"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Netflix_Logomark.png" alt="Netflix" /></div>
+              <div className="channel-logo spotify" aria-label="Spotify"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Full_Logo_RGB_Green.png" alt="Spotify" /></div>
               <div className="channel-logo radio" aria-label="Rádio FM"><span className="radio-mark">FM</span><b>RÁDIO</b></div>
             </div>
             <small className="channel-disclaimer">Marcas exibidas apenas como referência de canais e plataformas. Não indicam parceria, afiliação ou representação comercial.</small>
