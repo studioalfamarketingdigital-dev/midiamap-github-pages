@@ -1,4 +1,5 @@
 import Inventory from '../components/Inventory';
+import ProgrammaticAI from '../components/ProgrammaticAI';
 
 const mediaTypes = [
   { icon: '▰', title: 'Outdoor', text: 'Grandes formatos em ruas e avenidas.' },
@@ -85,25 +86,7 @@ export default function Home() {
 
         <section className="split-cta container" id="anuncie"><div><span className="eyebrow light">PARA ANUNCIANTES</span><h2>Encontre onde<br /><em>sua marca deve estar.</em></h2><p>Conte seu objetivo, região e orçamento. Nossa equipe pesquisa opções, consulta disponibilidade e prepara uma proposta de campanha.</p><a className="button button-green" href="#inventario">Explorar inventário ↗</a></div><div className="cta-orbit"><div className="orbit orbit-a" /><div className="orbit orbit-b" /><div className="orbit-label">SUA<br /><b>MARCA</b></div><span className="orbit-pin op1">OOH</span><span className="orbit-pin op2">LED</span><span className="orbit-pin op3">DOOH</span></div></section>
 
-        <section className="programmatic-section" id="programatica">
-          <div className="container">
-            <div className="programmatic-heading">
-              <div><span className="eyebrow">MÍDIA DIGITAL • COMPRA ORIENTADA POR DADOS</span><h2>Mídia programática.<br /><span>Precisão para sua campanha.</span></h2></div>
-              <p>Planeje campanhas digitais com segmentação de público, contexto e região. A MídiaMap recebe seu briefing e estrutura uma proposta conforme os canais, formatos e tecnologias disponíveis para cada projeto.</p>
-            </div>
-            <div className="programmatic-grid">
-              <article className="programmatic-card"><span>01</span><div className="programmatic-icon">◎</div><h3>Display e mobile</h3><p>Formatos gráficos em sites, aplicativos e ambientes digitais participantes.</p></article>
-              <article className="programmatic-card"><span>02</span><div className="programmatic-icon">▶</div><h3>Vídeo e CTV</h3><p>Planejamento de anúncios em vídeo e ambientes de televisão conectada, conforme inventário disponível.</p></article>
-              <article className="programmatic-card"><span>03</span><div className="programmatic-icon">♫</div><h3>Áudio digital</h3><p>Possibilidades de inserção em plataformas e conteúdos de áudio digital.</p></article>
-              <article className="programmatic-card"><span>04</span><div className="programmatic-icon">⌖</div><h3>Segmentação</h3><p>Estratégias por região, contexto e perfil de audiência, respeitando os dados e recursos permitidos pelas plataformas.</p></article>
-            </div>
-            <div className="programmatic-process">
-              <div><b>Como funciona</b><p>Você informa objetivo, praça, público, período e orçamento. Nossa equipe avalia os canais e a viabilidade e retorna com uma proposta para aprovação.</p></div>
-              <a className="button button-green" href="mailto:studioalfamktag@bol.com.br?subject=Briefing%20de%20m%C3%ADdia%20program%C3%A1tica&body=Ol%C3%A1!%20Quero%20planejar%20uma%20campanha%20de%20m%C3%ADdia%20program%C3%A1tica.%0A%0AEmpresa%3A%0AObjetivo%20da%20campanha%3A%0ACidades%2Fregi%C3%B5es%3A%0AP%C3%BAblico%3A%0APer%C3%ADodo%3A%0AOr%C3%A7amento%3A%0A%0AContato%3A">Solicitar planejamento ↗</a>
-            </div>
-            <small className="programmatic-note">A contratação e a veiculação dependem de disponibilidade, critérios de aprovação, plataformas e inventário de terceiros. A MídiaMap não declara integração automática ou compra em tempo real nesta etapa.</small>
-          </div>
-        </section>
+        <section className="programmatic-section" id="programatica"><div className="container"><ProgrammaticAI /></div></section>
 
         <section className="owner-section" id="cadastro"><div className="container owner-inner"><div><span className="eyebrow">PARA DONOS DE MÍDIA</span><h2>Tem um espaço<br /><span>publicitário?</span></h2><p>É proprietário ou representante de um veículo? Apresente seus formatos, praças, tabela comercial e dados de audiência para nossa equipe avaliar uma parceria.</p></div><a className="button button-dark" href="mailto:studioalfamktag@bol.com.br?subject=Cadastro de veículo de mídia no MídiaMap&body=Olá! Quero cadastrar meu veículo de mídia na base da MídiaMap.\n\nNome do veículo/empresa:\nCidade/UF:\nFormatos disponíveis:\nContato comercial:\nTabela e mídia kit (anexar):">Quero ser fornecedor ↗</a></div></section>
       </main>
