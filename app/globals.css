@@ -65,3 +65,12 @@
 .channel-logo.radio b{font-size:17px;letter-spacing:1px}
 .channel-disclaimer{display:block;color:#8a9890;font-size:9px;line-height:1.5;margin-top:7px}
 @media(max-width:600px){.channel-band{padding:27px 0 22px}.channel-band-heading{display:block}.channel-band-heading p{margin-top:8px}.channel-logos{justify-content:flex-start;gap:27px}.channel-logo b{font-size:18px}}
+
+/* Imagens originais das marcas — proporção preservada */
+.channel-logo img{display:block;width:auto;height:auto;max-width:145px;max-height:54px;object-fit:contain}
+.channel-logo[aria-label="TV Globo"] img{max-width:82px;max-height:54px}
+.channel-logo[aria-label="SBT"] img{max-width:60px;max-height:58px}
+.channel-logo[aria-label="Record"] img{max-width:58px;max-height:58px}
+.channel-logo.netflix img{width:auto;height:auto;max-width:116px;max-height:50px}
+.channel-logo.spotify img{width:auto;height:auto;max-width:145px;max-height:43px}
+@media(max-width:600px){.channel-logo img{max-height:48px}.channel-logo.spotify img{max-width:130px}}
