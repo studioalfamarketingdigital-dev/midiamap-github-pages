@@ -10,7 +10,7 @@ const suppliers = [
     category: 'OOH / DOOH / mobiliário urbano',
     region: 'Brasília e Entorno',
     formats: 'Frontlight, empena, minifront, outdoor, LED, busdoor, indoor e totens.',
-    proof: 'O catálogo público exibe 356 mídias. Pontos identificados: REF 104, empena iluminada 11 × 6,7 m na Avenida Castanheiras, em frente à CIA Toy, Águas Claras (−15.835408, −48.018370); e REF 823, painel LED 9 × 3 m, vídeo de 10 s, na Avenida Rio Verde com Av. José Leandro da Cruz, Setor Jardim Luz, Goiânia (−16.741490, −49.275378). Preço e disponibilidade sob confirmação do operador.',
+    proof: 'O catálogo público exibe 388 mídias (consulta em 03/11/2026). Pontos identificados: REF 104, empena iluminada 11 × 6,7 m na Avenida Castanheiras, em frente à CIA Toy, Águas Claras (−15.835408, −48.018370); e REF 823, painel LED 9 × 3 m, vídeo de 10 s, na Avenida Rio Verde com Av. José Leandro da Cruz, Setor Jardim Luz, Goiânia (−16.741490, −49.275378). Preço e disponibilidade sob confirmação do operador.',
     contact: '61 3034-6523 · gbmpublicidade@gmail.com',
     href: 'https://grupobrasilmidia.com.br/midias/104',
     action: 'Ver ficha real do ponto REF 104',
