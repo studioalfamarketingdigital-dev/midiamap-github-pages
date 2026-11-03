@@ -41,7 +41,7 @@ export default function Home() {
             <span className="eyebrow"><span className="eyebrow-dot" /> MARKETPLACE DE MÍDIA</span>
             <h1>Sua marca.<br /><em>Onde importa.</em></h1>
             <p className="hero-lead">Pesquise veículos, consulte fornecedores e monte campanhas com disponibilidade, localização e preço confirmados antes da contratação.</p>
-            <div className="hero-search"><span className="search-icon">⌕</span><span className="hero-search-label">Explore oportunidades por cidade, formato e faixa de investimento.</span><a className="button button-dark" href="#inventario">Explorar mídia <span>↗</span></a></div>
+            <form className="hero-search" action="/#inventario" method="get"><span className="search-icon">⌕</span><input className="hero-search-input" type="search" name="q" placeholder="Digite cidade, bairro ou tipo de mídia" aria-label="Buscar mídia por cidade, bairro ou formato" /><button className="button button-dark" type="submit">Buscar mídia <span>↗</span></button></form>
             <div className="hero-meta"><span>✓ Fornecedores identificados</span><span>✓ Cotação por escrito</span><span>✓ Proposta sob medida</span></div>
           </div>
           <div className="hero-map" aria-label="Mapa ilustrativo de espaços publicitários">
