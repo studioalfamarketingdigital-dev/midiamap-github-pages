@@ -1,3 +1,9 @@
+const publicListings = [
+  { ref: 'REF 603', title: 'Painel LED — EPTG, sentido Plano Piloto', city: 'Brasília · DF', price: 'R$ 3.500/mês', specs: '2 × 4 m · vídeo vertical de 15 s · 550 inserções/dia', location: 'Ao lado do Posto Garantia, marginal sul da EPTG, acesso ao Flórida Mall e à SQB.', audience: 'Fluxo divulgado pelo operador: 320 mil veículos/dia.', coords: '−15.811751, −47.996162', href: 'https://grupobrasilmidia.com.br/midia-locacao/152-painel-de-led-para-aluguel-selecione-bairro-brasilia-603' },
+  { ref: 'REF 118', title: 'Empena iluminada — Avenida Jacarandá', city: 'Águas Claras · DF', price: 'R$ 8.500/mês', specs: '16 × 6 m · empena iluminada', location: 'Ao lado da Praça Parque Sul, a menos de 1 minuto do Hospital de Águas Claras.', audience: 'Fluxo divulgado pelo operador: 135 mil veículos/dia.', coords: 'Localização indicada na ficha do fornecedor', href: 'https://grupobrasilmidia.com.br/midia-locacao/65-empena-baixa-para-aluguel-selecione-bairro-brasilia-118' },
+  { ref: 'REF 823', title: 'Painel LED — Avenida Rio Verde', city: 'Goiânia · GO', price: 'Sob cotação', specs: '9 × 3 m · vídeo horizontal de 10 s', location: 'Semáforo da Av. José Leandro da Cruz, Setor Jardim Luz.', audience: 'Ficha técnica e ponto geográfico publicados pelo operador.', coords: '−16.741490, −49.275378', href: 'https://grupobrasilmidia.com.br/midias/823' }
+];
+
 const suppliers = [
   {
     name: 'Grupo Brasil Mídia',
@@ -127,6 +133,26 @@ export default function SupplierDirectory() {
             </article>
           ))}
         </div>
+        <section className="public-listings">
+          <div className="public-listings-heading">
+            <div><span className="eyebrow">PONTOS REAIS PUBLICADOS PELO FORNECEDOR</span><h3>Locações encontradas no catálogo.</h3></div>
+            <p>Valores e especificações transcritos das fichas públicas do Grupo Brasil Mídia. Não são cotações emitidas para a MídiaMap; confirme disponibilidade, vigência e comissão antes de revender.</p>
+          </div>
+          <div className="public-listing-grid">
+            {publicListings.map((listing) => (
+              <article className="public-listing-card" key={listing.ref}>
+                <div className="public-listing-top"><span>{listing.ref}</span><strong>{listing.price}</strong></div>
+                <h4>{listing.title}</h4>
+                <span className="public-listing-city">{listing.city}</span>
+                <p>{listing.specs}</p>
+                <p>{listing.location}</p>
+                <p>{listing.audience}</p>
+                <small>Coordenadas: {listing.coords}</small>
+                <a href={listing.href} target="_blank" rel="noopener noreferrer">Abrir ficha do fornecedor ↗</a>
+              </article>
+            ))}
+          </div>
+        </section>
         <p className="supplier-footnote">Próxima etapa operacional: solicitar mídia kit, tabela vigente, planilha de pontos com endereço e coordenadas, fotos de comprovação, formatos, período mínimo, disponibilidade e política de comissão/agenciamento.</p>
       </div>
     </section>
