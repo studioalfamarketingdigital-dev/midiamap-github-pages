@@ -116,3 +116,71 @@
   .channel-logo.radio b{font-size:15px}
 }
 
+/* Carrossel contínuo de marcas em uma única fileira */
+.channel-slider{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+  padding:10px 0 14px;
+  -webkit-mask-image:linear-gradient(to right,transparent,black 4%,black 96%,transparent);
+  mask-image:linear-gradient(to right,transparent,black 4%,black 96%,transparent);
+}
+.channel-track{
+  display:flex;
+  width:max-content;
+  align-items:center;
+  animation:channel-marquee 24s linear infinite;
+  will-change:transform;
+}
+.channel-slider:hover .channel-track{animation-play-state:paused}
+.channel-set{
+  display:flex;
+  flex:0 0 auto;
+  align-items:center;
+  justify-content:space-around;
+  gap:clamp(28px,5vw,72px);
+  padding:0 clamp(14px,2.5vw,32px);
+}
+.channel-logo{
+  display:flex;
+  flex:0 0 auto;
+  width:auto;
+  min-width:72px;
+  min-height:58px;
+  height:58px;
+  align-items:center;
+  justify-content:center;
+  padding:4px;
+}
+.channel-logo img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:clamp(58px,10vw,145px);
+  max-height:clamp(34px,4.5vw,54px);
+  object-fit:contain;
+}
+.channel-logo[aria-label="TV Globo"] img{max-width:82px;max-height:54px}
+.channel-logo[aria-label="SBT"] img{max-width:60px;max-height:58px}
+.channel-logo[aria-label="Record"] img{max-width:58px;max-height:58px}
+.channel-logo.netflix img{max-width:116px;max-height:50px}
+.channel-logo.spotify img{max-width:145px;max-height:43px}
+@keyframes channel-marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@media(max-width:600px){
+  .channel-band{padding:27px 0 22px}
+  .channel-band-heading{display:block}
+  .channel-band-heading p{margin-top:8px}
+  .channel-set{gap:30px;padding:0 15px}
+  .channel-logo{min-width:62px;height:50px;min-height:50px}
+  .channel-logo img{max-height:42px}
+  .channel-logo.spotify img{max-width:125px;max-height:38px}
+  .channel-logo.radio b{font-size:15px}
+  .channel-track{animation-duration:19s}
+}
+@media(prefers-reduced-motion:reduce){
+  .channel-track{animation:none;transform:none}
+  .channel-slider{overflow-x:auto;mask-image:none;-webkit-mask-image:none}
+}
