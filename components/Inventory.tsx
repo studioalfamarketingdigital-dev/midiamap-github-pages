@@ -40,6 +40,8 @@ export default function Inventory() {
     setSubmitted(true);
   };
 
+  if (spaces.length === 0) return <div className="inventory-empty-live"><span className="eyebrow">INVENTÁRIO EM IMPLANTAÇÃO</span><h3>Estamos cadastrando pontos reais.</h3><p>Os exemplos de demonstração foram retirados. Estamos validando localização, fotos, formato, disponibilidade e tabela comercial diretamente com os fornecedores.</p><a className="button button-green" href="#fornecedores">Consultar fornecedores disponíveis ↗</a></div>;
+
   return <div className="inventory-shell">
     <div className="filter-bar"><div className="filter-search"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Busque por cidade, bairro ou tipo de mídia" aria-label="Buscar no inventário" /></div><select value={format} onChange={(event) => setFormat(event.target.value)} aria-label="Filtrar por formato"><option>Todos</option>{formats.map((item) => <option key={item}>{item}</option>)}</select><select value={maxPrice} onChange={(event) => setMaxPrice(event.target.value)} aria-label="Filtrar por preço"><option value="Todos">Qualquer preço</option><option value="500">Até R$ 500</option><option value="1000">Até R$ 1.000</option><option value="above">Acima de R$ 1.000</option></select></div>
     <div className="inventory-count"><span><b>{filtered.length}</b> referências de mídia</span><span>Mapa real · OpenStreetMap <button onClick={clearFilters}>Limpar filtros</button></span></div>
