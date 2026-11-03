@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { Space } from '../lib/spaces';
-import { brl } from '../lib/spaces';
 import 'leaflet/dist/leaflet.css';
 
 type Props = { spaces: Space[]; selectedId: string | null; onSelect: (id: string) => void };
@@ -51,9 +50,8 @@ export default function RealMap({ spaces, selectedId, onSelect }: Props) {
           fillColor: selected ? '#071c14' : '#19c77a',
           fillOpacity: 1
         }).addTo(mapRef.current);
-        const price = space.price === null ? 'Preço sob consulta' : `Preço publicado: ${brl(space.price)} / mês`;
         marker.bindPopup(
-          `<div class="leaflet-card"><span>${space.format.toUpperCase()}</span><strong>${space.place}, ${space.city}</strong><small>${space.dimension}</small><b>${price}</b><a href="${space.sourceUrl}" target="_blank" rel="noopener noreferrer">Ver ficha do operador ↗</a></div>`
+          `<div class="leaflet-card"><span>${space.format.toUpperCase()}</span><strong>${space.place}, ${space.city}</strong><small>${space.dimension}</small><b>Solicite uma cotação</b></div>`
         );
         marker.on('click', () => onSelect(space.id));
         if (selected) marker.openPopup();
