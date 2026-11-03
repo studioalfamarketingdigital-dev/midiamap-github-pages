@@ -184,3 +184,20 @@
   .channel-track{animation:none;transform:none}
   .channel-slider{overflow-x:auto;mask-image:none;-webkit-mask-image:none}
 }
+
+
+/* Rodapé institucional MídiaMap / STUDIOALFAMKT */
+.footer{padding-top:66px}
+.footer-main{grid-template-columns:minmax(260px,2.2fr) repeat(3,minmax(120px,1fr));gap:clamp(24px,4vw,58px);padding-bottom:42px}
+.footer-about{max-width:390px}
+.footer-about>p{max-width:350px;line-height:1.75;margin:16px 0 20px}
+.footer-company-link{display:inline-flex;align-items:center;flex-wrap:wrap;gap:5px;color:#c3d4cb;font-size:11px;line-height:1.6}
+.footer-company-link strong,.footer-company-link span{color:#76e9af}
+.footer-company-link:hover,.footer-bottom a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.footer-col{gap:13px}
+.footer-col a{transition:color .18s ease}
+.footer-col a:hover{color:#76e9af}
+.footer-bottom{align-items:center;gap:18px;line-height:1.7}
+.footer-bottom a{color:#c3d4cb;font-weight:800}
+@media(max-width:900px){.footer-main{grid-template-columns:2fr 1fr 1fr}.footer-about{grid-column:1/-1;max-width:520px}}
+@media(max-width:600px){.footer{padding-top:48px}.footer-main{grid-template-columns:1fr 1fr;gap:28px 20px;padding-bottom:30px}.footer-about{grid-column:1/-1}.footer-bottom{margin-top:28px}.footer-bottom span{display:block}.footer-company-link{font-size:10px}}
