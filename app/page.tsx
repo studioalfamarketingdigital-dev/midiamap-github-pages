@@ -48,6 +48,24 @@ export default function Home() {
 
         <section className="trust-strip"><div className="container trust-inner"><span>PARA QUEM PLANEJA CAMPANHAS</span><div><b>OOH</b> <b>DOOH</b> <b>INDOOR</b> <b>TV</b> <b>RÁDIO</b></div></div></section>
 
+        <section className="channel-band" aria-label="Canais e plataformas de mídia">
+          <div className="container">
+            <div className="channel-band-heading">
+              <span className="eyebrow">MÍDIA EM MÚLTIPLAS TELAS</span>
+              <p>Planeje campanhas em diferentes canais e plataformas.</p>
+            </div>
+            <div className="channel-logos">
+              <div className="channel-logo globo" aria-label="TV Globo"><span className="globo-mark"><i /></span><b>globo</b></div>
+              <div className="channel-logo sbt" aria-label="SBT"><b>sbt</b></div>
+              <div className="channel-logo record" aria-label="Record"><b>RECORD</b></div>
+              <div className="channel-logo netflix" aria-label="Netflix"><img src="https://cdn.simpleicons.org/netflix/E50914" alt="" /><b>NETFLIX</b></div>
+              <div className="channel-logo spotify" aria-label="Spotify"><img src="https://cdn.simpleicons.org/spotify/1DB954" alt="" /><b>Spotify</b></div>
+              <div className="channel-logo radio" aria-label="Rádio FM"><span className="radio-mark">FM</span><b>RÁDIO</b></div>
+            </div>
+            <small className="channel-disclaimer">Marcas exibidas apenas como referência de canais e plataformas. Não indicam parceria, afiliação ou representação comercial.</small>
+          </div>
+        </section>
+
         <section className="section" id="midias"><div className="container"><div className="section-heading"><div><span className="eyebrow">EXPLORE POR FORMATO</span><h2>Encontre a mídia certa<br /><span>para sua campanha.</span></h2></div><p>Do outdoor tradicional à TV, rádio e mídia impressa. Explore formatos e solicite um plano de mídia com apoio da nossa equipe.</p></div><div className="type-grid">{mediaTypes.map((type) => <a className="type-card" href="#inventario" key={type.title}><span className="type-icon">{type.icon}</span><h3>{type.title}</h3><p>{type.text}</p><span className="arrow">↗</span></a>)}</div></div></section>
 
         <section className="section inventory-section" id="inventario"><div className="container"><div className="section-heading compact"><div><span className="eyebrow">INVENTÁRIO EM DESTAQUE</span><h2>Sua próxima campanha<br /><span>começa no mapa.</span></h2></div><span className="text-link">Espaços e formatos</span></div><Inventory /></div></section>
