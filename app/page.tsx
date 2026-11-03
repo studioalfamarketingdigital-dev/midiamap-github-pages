@@ -1,4 +1,5 @@
 import Inventory from '../components/Inventory';
+import AdminHashPanel from '../components/AdminHashPanel';
 
 const mediaTypes = [
   { icon: '▰', title: 'Outdoor', text: 'Grandes formatos em ruas e avenidas.' },
@@ -59,6 +60,7 @@ export default function Home() {
       </main>
 
       <footer className="footer"><div className="container footer-main"><div><a className="brand footer-brand" href="#top">Mídia<span>Map</span></a><p>Planejamento, negociação e oportunidades de mídia em um só lugar.</p></div><div className="footer-col"><b>PLATAFORMA</b><a href="#inventario">Inventário</a><a href="#midias">Mídias</a><a href="#anuncie">Anuncie</a><a href="#cadastro">Seja parceiro</a></div><div className="footer-col"><b>EMPRESA</b><a href="mailto:studioalfamktag@bol.com.br">Contato</a><a href="#top">Sobre</a><a href="#top">Privacidade</a></div><div className="footer-col"><b>MÍDIAS</b><a href="#inventario">Outdoor</a><a href="#inventario">DOOH</a><a href="#inventario">LED</a><a href="#inventario">Indoor</a></div></div><div className="container footer-bottom"><span>© 2026 MídiaMap. Um produto S.Alfa MKT.</span><span>midiamap.studioalfamkt.online</span></div></footer>
+      <AdminHashPanel />
     </>
   );
 }
