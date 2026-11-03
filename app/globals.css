@@ -201,3 +201,26 @@
 .footer-bottom a{color:#c3d4cb;font-weight:800}
 @media(max-width:900px){.footer-main{grid-template-columns:2fr 1fr 1fr}.footer-about{grid-column:1/-1;max-width:520px}}
 @media(max-width:600px){.footer{padding-top:48px}.footer-main{grid-template-columns:1fr 1fr;gap:28px 20px;padding-bottom:30px}.footer-about{grid-column:1/-1}.footer-bottom{margin-top:28px}.footer-bottom span{display:block}.footer-company-link{font-size:10px}}
+
+
+/* Mídia programática */
+.programmatic-section{padding:88px 0;background:#0b2419;color:#fff}
+.programmatic-heading{display:grid;grid-template-columns:1fr 390px;gap:44px;align-items:end;margin-bottom:34px}
+.programmatic-heading .eyebrow{color:#76e9af}
+.programmatic-heading h2{font-size:clamp(36px,4.5vw,54px);line-height:.98;letter-spacing:-2.8px;margin:14px 0 0}
+.programmatic-heading h2 span{color:#a8ef42}
+.programmatic-heading>p{color:#b7c9bf;font-size:14px;line-height:1.7;margin:0}
+.programmatic-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.programmatic-card{position:relative;min-height:230px;padding:23px;border:1px solid #315341;border-radius:15px;background:linear-gradient(145deg,#143b2a,#0d2b1e)}
+.programmatic-card>span{position:absolute;right:19px;top:18px;color:#7f9d8c;font-size:10px;font-weight:900}
+.programmatic-icon{width:43px;height:43px;border-radius:12px;background:#a8ef42;color:#123d30;display:grid;place-items:center;font-size:24px;font-weight:900}
+.programmatic-card h3{font-size:18px;margin:27px 0 8px;letter-spacing:-.4px}
+.programmatic-card p{color:#b7c9bf;font-size:12px;line-height:1.6;margin:0}
+.programmatic-process{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:17px;padding:23px 25px;border-radius:14px;background:#173e2c}
+.programmatic-process>div{max-width:690px}
+.programmatic-process b{font-size:15px}
+.programmatic-process p{color:#c0d1c7;font-size:12px;line-height:1.6;margin:7px 0 0}
+.programmatic-process .button{flex:0 0 auto}
+.programmatic-note{display:block;color:#8fa99a;font-size:10px;line-height:1.6;margin-top:15px}
+@media(max-width:900px){.programmatic-heading{grid-template-columns:1fr 300px;gap:25px}.programmatic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.programmatic-section{padding:58px 0}.programmatic-heading{display:block}.programmatic-heading>p{margin-top:16px}.programmatic-grid{grid-template-columns:1fr}.programmatic-card{min-height:0}.programmatic-process{display:grid;padding:20px}.programmatic-process .button{width:100%}}
