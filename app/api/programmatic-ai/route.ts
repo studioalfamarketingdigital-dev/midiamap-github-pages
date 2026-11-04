@@ -71,7 +71,7 @@ export async function POST(request: NextRequest) {
     ].join('\n');
     if (!IMAGE_MODEL) return NextResponse.json({ error: 'O planejamento usa IA gratuita. Para gerar imagens diretamente, é necessário escolher e configurar um modelo de imagem no OpenRouter; esses modelos são cobrados por geração e não fazem parte da cota gratuita de texto.' }, { status: 402 });
     const response = await fetch('https://openrouter.ai/api/v1/images', {
-      method: 'POST', headers: { Authorization: 'Bearer ' + gatewayKey(), 'Content-Type': 'application/json' },
+      method: 'POST', headers: { Authorization: 'Bearer ' + openRouterKey(), 'Content-Type': 'application/json' },
       body: JSON.stringify({ model: IMAGE_MODEL, prompt, size: brief.format.includes('9:16') ? '1024x1536' : brief.format.includes('16:9') || brief.format.includes('horizontal') ? '1536x1024' : '1024x1024' })
     });
     const data = await response.json();
