@@ -5,7 +5,7 @@ export const maxDuration = 60;
 
 const TEXT_MODEL = process.env.MIDIA_AI_TEXT_MODEL || 'openai/gpt-6-sol';
 const IMAGE_MODEL = process.env.MIDIA_AI_IMAGE_MODEL || 'bfl/flux-3-image';
-const gatewayKey = () => process.env.AI_GATEWAY_API_KEY;
+const gatewayKey = () => process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
 
 type Brief = { brand?: string; business?: string; objective?: string; location?: string; audience?: string; budget?: string; period?: string; offer?: string; format?: string; tone?: string };
 const limits = new Map<string, { count: number; reset: number }>();
@@ -26,7 +26,7 @@ function clean(value: unknown, max = 500) {
 }
 
 export async function POST(request: NextRequest) {
-  if (!gatewayKey()) return NextResponse.json({ error: 'A IA ainda não foi ativada no servidor. A equipe precisa configurar a chave do Vercel AI Gateway nas variáveis da Vercel.' }, { status: 503 });
+  if (!gatewayKey()) return NextResponse.json({ error: 'A autenticação do Vercel AI Gateway não está disponível neste ambiente. Verifique a integração OIDC do projeto ou configure AI_GATEWAY_API_KEY.' }, { status: 503 });
   let body: { mode?: string; brief?: Brief };
   try { body = await request.json(); } catch { return NextResponse.json({ error: 'Briefing inválido.' }, { status: 400 }); }
   const mode = body.mode === 'image' ? 'image' : body.mode === 'plan' ? 'plan' : '';
