@@ -3,9 +3,9 @@ import { NextRequest, NextResponse } from 'next/server';
 export const runtime = 'nodejs';
 export const maxDuration = 60;
 
-const TEXT_MODEL = process.env.MIDIA_AI_TEXT_MODEL || 'openai/gpt-6-sol';
-const IMAGE_MODEL = process.env.MIDIA_AI_IMAGE_MODEL || 'bfl/flux-3-image';
-const gatewayKey = () => process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
+const TEXT_MODEL = process.env.OPENROUTER_TEXT_MODEL || 'openrouter/free';
+const IMAGE_MODEL = process.env.OPENROUTER_IMAGE_MODEL || '';
+const openRouterKey = () => process.env.OPENROUTER_API_KEY;
 
 type Brief = { brand?: string; business?: string; objective?: string; location?: string; audience?: string; budget?: string; period?: string; offer?: string; format?: string; tone?: string };
 const limits = new Map<string, { count: number; reset: number }>();
@@ -26,7 +26,7 @@ function clean(value: unknown, max = 500) {
 }
 
 export async function POST(request: NextRequest) {
-  if (!gatewayKey()) return NextResponse.json({ error: 'A autenticação do Vercel AI Gateway não está disponível neste ambiente. Verifique a integração OIDC do projeto ou configure AI_GATEWAY_API_KEY.' }, { status: 503 });
+  if (!openRouterKey()) return NextResponse.json({ error: 'A IA gratuita ainda não foi conectada. Configure OPENROUTER_API_KEY nas variáveis da Vercel.' }, { status: 503 });
   let body: { mode?: string; brief?: Brief };
   try { body = await request.json(); } catch { return NextResponse.json({ error: 'Briefing inválido.' }, { status: 400 }); }
   const mode = body.mode === 'image' ? 'image' : body.mode === 'plan' ? 'plan' : '';
@@ -43,8 +43,8 @@ export async function POST(request: NextRequest) {
 
   try {
     if (mode === 'plan') {
-      const response = await fetch('https://ai-gateway.vercel.sh/v1/chat/completions', {
-        method: 'POST', headers: { Authorization: 'Bearer ' + gatewayKey(), 'Content-Type': 'application/json' },
+      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST', headers: { Authorization: 'Bearer ' + openRouterKey(), 'Content-Type': 'application/json' },
         body: JSON.stringify({
           model: TEXT_MODEL, temperature: 0.7, max_tokens: 1800,
           messages: [
@@ -69,14 +69,15 @@ export async function POST(request: NextRequest) {
       'Art direction: high-end commercial advertising, strong visual hierarchy, polished art direction, realistic product or service context, clear focal point, professional lighting, composition adapted to requested format.',
       'If exact Portuguese copy is provided, render only short accurate text; otherwise do not invent prices, discounts, phone numbers, addresses, logos or legal claims. Avoid gibberish text and watermarks.'
     ].join('\n');
-    const response = await fetch('https://ai-gateway.vercel.sh/v1/images/generations', {
+    if (!IMAGE_MODEL) return NextResponse.json({ error: 'O planejamento usa IA gratuita. Para gerar imagens diretamente, é necessário escolher e configurar um modelo de imagem no OpenRouter; esses modelos são cobrados por geração e não fazem parte da cota gratuita de texto.' }, { status: 402 });
+    const response = await fetch('https://openrouter.ai/api/v1/images', {
       method: 'POST', headers: { Authorization: 'Bearer ' + gatewayKey(), 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: IMAGE_MODEL, prompt, n: 1, size: brief.format.includes('9:16') ? '1024x1536' : brief.format.includes('16:9') || brief.format.includes('horizontal') ? '1536x1024' : '1024x1024', response_format: 'b64_json' })
+      body: JSON.stringify({ model: IMAGE_MODEL, prompt, size: brief.format.includes('9:16') ? '1024x1536' : brief.format.includes('16:9') || brief.format.includes('horizontal') ? '1536x1024' : '1024x1024' })
     });
     const data = await response.json();
     if (!response.ok) throw new Error(data?.error?.message || 'Falha no gerador de imagens (' + response.status + ').');
     const item = data?.data?.[0];
-    const image = item?.b64_json ? 'data:image/png;base64,' + item.b64_json : item?.url;
+    const image = item?.b64_json ? 'data:' + (item?.media_type || 'image/png') + ';base64,' + item.b64_json : item?.url;
     if (typeof image !== 'string' || !image) throw new Error('O gerador não retornou uma imagem.');
     return NextResponse.json({ image });
   } catch (error) {
