@@ -29,6 +29,8 @@ jobs:
         run: npm install --legacy-peer-deps --package-lock=false --no-audit --no-fund
       - name: Compilar site estático
         run: npm run build
+      - name: Verificar saída estática
+        run: test -f out/index.html
       - name: Preparar artefato do Pages
         uses: actions/upload-pages-artifact@v3
         with:
