@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import Inventory from '../../components/Inventory';
+export const metadata:Metadata={title:'Buscar espaços de mídia',description:'Busque espaços de mídia por cidade, localização e formato no catálogo MídiaMap.',alternates:{canonical:'/busca/'},robots:{index:false,follow:true}};
+export default function Page(){return <main className="section container"><span className="eyebrow">BUSCA DE INVENTÁRIO</span><h1>Buscar espaços de mídia</h1><p>Pesquise referências do catálogo por praça, região e formato. Preços e disponibilidade são confirmados com o operador.</p><Inventory/></main>}
