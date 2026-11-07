@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import InfoPage from '../../components/InfoPage';
+export const metadata:Metadata={title:'Acesso à plataforma',description:'Informações sobre acesso ao MídiaMap.',robots:{index:false,follow:false}};
+export default function Page(){return <InfoPage eyebrow="ACESSO" title="Área de acesso MídiaMap" description="O acesso autenticado para anunciantes e operadores ainda não está habilitado nesta versão pública. Para solicitar atendimento ou acompanhar uma cotação, entre em contato com studioalfamktag@bol.com.br."/>}
