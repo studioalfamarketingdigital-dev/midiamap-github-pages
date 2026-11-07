@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import InfoPage from '../../components/InfoPage';
+export const metadata:Metadata={title:'Contato | MídiaMap',description:'Fale com a equipe MídiaMap e Studio Alfa MKT para dúvidas, parcerias e cotações.',alternates:{canonical:'/contato/'}};
+export default function Page(){return <InfoPage eyebrow="FALE COM A EQUIPE" title="Vamos conversar sobre sua próxima campanha." description="Para atendimento comercial, dúvidas sobre inventário ou cadastro de operadores, escreva para studioalfamktag@bol.com.br. Informe sua cidade, formato de interesse e período desejado para agilizar o retorno."/>}
