@@ -104,6 +104,15 @@ export default function ProgrammaticAI() {
     setResult(mode === 'plan' ? buildPlan() : buildCreativeBrief());
   }
 
+  async function copyResult() {
+    try {
+      await navigator.clipboard.writeText(result);
+      setError('');
+    } catch {
+      setError('Não foi possível copiar automaticamente. Selecione o texto do planejamento e copie manualmente.');
+    }
+  }
+
   function downloadPdf() {
     if (!result) return;
     const printWindow = window.open('', '_blank', 'width=900,height=700');
@@ -137,6 +146,6 @@ export default function ProgrammaticAI() {
       <button className="button button-green ai-generate" type="submit">✦ {mode === 'plan' ? 'Gerar planejamento' : 'Montar briefing visual'}</button>
       {error && <div className="ai-error" role="alert">{error}</div>}
     </form>
-    {result && <section className="ai-result"><div className="ai-result-head"><strong>{mode === 'plan' ? 'Planejamento da campanha' : 'Briefing de direção de arte'}</strong><div className="ai-result-actions"><button onClick={() => navigator.clipboard?.writeText(result)}>Copiar texto</button><button className="ai-pdf-button" onClick={downloadPdf}>Imprimir / salvar PDF ↗</button></div></div><pre>{result}</pre><small className="ai-disclaimer">Material de apoio gerado a partir das informações preenchidas. Não substitui pesquisa, validação de inventário ou aprovação comercial.</small></section>}
+    {result && <section className="ai-result"><div className="ai-result-head"><strong>{mode === 'plan' ? 'Planejamento da campanha' : 'Briefing de direção de arte'}</strong><div className="ai-result-actions"><button onClick={() => void copyResult()}>Copiar texto</button><button className="ai-pdf-button" onClick={downloadPdf}>Imprimir / salvar PDF ↗</button></div></div><pre>{result}</pre><small className="ai-disclaimer">Material de apoio gerado a partir das informações preenchidas. Não substitui pesquisa, validação de inventário ou aprovação comercial.</small></section>}
   </div>;
 }
