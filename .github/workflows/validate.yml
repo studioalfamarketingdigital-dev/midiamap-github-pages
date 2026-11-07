@@ -22,5 +22,7 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm install --legacy-peer-deps --package-lock=false --no-audit --no-fund
+      - name: Verify static export
+        run: test -f out/index.html
       - name: Build Next.js
         run: npm run build
