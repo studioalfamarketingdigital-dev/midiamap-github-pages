@@ -1,5 +1,35 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-export const metadata:Metadata={metadataBase:new URL('https://midiamap.studioalfamkt.online'),title:{default:'MídiaMap | Outdoor, painel LED e mídia OOH em Brasília e Goiás',template:'%s | MídiaMap'},description:'Marketplace de mídia OOH e DOOH. Encontre outdoor, painel LED e espaços publicitários em Brasília, Goiânia, Luziânia e entorno.',keywords:['mídia OOH','DOOH','outdoor Brasília','painel LED Goiânia','mídia exterior','marketplace de mídia'],manifest:'/manifest.webmanifest',alternates:{canonical:'/'},openGraph:{title:'MídiaMap | Outdoor, painel LED e mídia OOH em Brasília e Goiás',description:'Marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT.',url:'https://midiamap.studioalfamkt.online/',siteName:'MídiaMap',locale:'pt_BR',type:'website',images:[{url:'/og-midiamap.svg',width:1200,height:630,alt:'MídiaMap — marketplace de mídia OOH e DOOH'}]},twitter:{card:'summary_large_image',title:'MídiaMap | Outdoor, painel LED e mídia OOH em Brasília e Goiás',description:'Marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT.',images:['/og-midiamap.svg']},robots:{index:true,follow:true,googleBot:{index:true,follow:true,'max-image-preview':'large'}}};
-export const viewport:Viewport={themeColor:'#19c77a',width:'device-width',initialScale:1};
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="pt-BR"><body>{children}</body></html>}
+import SiteHeader from '../components/SiteHeader';
+import SiteFooter from '../components/SiteFooter';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://midiamap.studioalfamkt.online'),
+  title: { default: 'MídiaMap | Outdoor, painel LED e mídia OOH em Brasília e Goiás', template: '%s | MídiaMap' },
+  description: 'Marketplace de mídia OOH e DOOH. Encontre outdoor, painel LED e espaços publicitários em Brasília, Goiânia, Luziânia e entorno.',
+  keywords: ['mídia OOH', 'DOOH', 'outdoor Brasília', 'painel LED Goiânia', 'mídia exterior', 'marketplace de mídia'],
+  manifest: '/manifest.webmanifest',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'MídiaMap | Outdoor, painel LED e mídia OOH em Brasília e Goiás',
+    description: 'Marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT.',
+    url: 'https://midiamap.studioalfamkt.online',
+    siteName: 'MídiaMap',
+    locale: 'pt_BR',
+    type: 'website',
+    images: [{ url: '/og-midiamap.svg', width: 1200, height: 630, alt: 'MídiaMap — marketplace de mídia OOH e DOOH' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MídiaMap | Outdoor, painel LED e mídia OOH em Brasília e Goiás',
+    description: 'Marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT.',
+    images: ['/og-midiamap.svg'],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
+};
+
+export const viewport: Viewport = { themeColor: '#19c77a', width: 'device-width', initialScale: 1 };
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return <html lang="pt-BR"><body><SiteHeader />{children}<SiteFooter /></body></html>;
+}
