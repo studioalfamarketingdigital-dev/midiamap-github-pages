@@ -1,0 +1,19 @@
+# MídiaMap
+
+MídiaMap é um marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT, que atende Brasília, Goiânia, Luziânia e entorno.
+
+A plataforma organiza referências de espaços publicitários e conecta anunciantes a operadores de outdoor, painéis LED, DOOH, indoor, TV, rádio e mídia impressa. Preços, disponibilidade, audiência e condições comerciais precisam ser confirmados com o operador.
+
+## Páginas
+- https://midiamap.studioalfamkt.online/
+- https://midiamap.studioalfamkt.online/espacos/
+- https://midiamap.studioalfamkt.online/mapa/
+- https://midiamap.studioalfamkt.online/anunciar/
+- https://midiamap.studioalfamkt.online/seja-parceiro/
+- https://midiamap.studioalfamkt.online/sobre/
+- https://midiamap.studioalfamkt.online/como-funciona/
+- https://midiamap.studioalfamkt.online/planos/
+- https://midiamap.studioalfamkt.online/faq/
+- https://midiamap.studioalfamkt.online/contato/
+
+Para solicitar cotação, informe praça, formato, objetivo, período e orçamento. Contato: studioalfamktag@bol.com.br.
