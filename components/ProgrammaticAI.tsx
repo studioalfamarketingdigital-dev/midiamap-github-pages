@@ -57,7 +57,7 @@ export default function ProgrammaticAI() {
       '• Configurar rastreamento e estabelecer uma linha de base para comparação.',
       '',
       'IMPORTANTE: este documento é um roteiro inicial de planejamento, não uma pesquisa de mercado nem uma confirmação de inventário, audiência, preço ou resultado. Ajuste a estratégia após validar os dados reais da campanha.'
-    ].join('\\n');
+    ].join('\n');
   }
 
   function buildCreativeBrief() {
@@ -91,7 +91,7 @@ export default function ProgrammaticAI() {
       '• Solicitar aprovação do cliente e do operador antes da veiculação.',
       '',
       'Este é um briefing textual para orientar a criação. A hospedagem estática atual não gera arquivos de imagem automaticamente.'
-    ].join('\\n');
+    ].join('\n');
   }
 
   function generate(event: FormEvent) {
