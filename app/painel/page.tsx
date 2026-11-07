@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import InfoPage from '../../components/InfoPage';
+export const metadata:Metadata={title:'Painel administrativo',description:'Área administrativa MídiaMap.',robots:{index:false,follow:false}};
+export default function Page(){return <InfoPage eyebrow="ADMINISTRAÇÃO" title="Painel administrativo" description="O painel administrativo exige autenticação e serviços de backend. Esta versão pública não expõe funções administrativas. O acesso será disponibilizado após a configuração segura da autenticação e do banco de dados."/>}
