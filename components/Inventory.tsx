@@ -52,7 +52,7 @@ export default function Inventory() {
       `Período: ${lead.period}`,
       `Orçamento: ${lead.budget || 'A definir'}`,
       `Observações: ${lead.message || 'Nenhuma'}`,
-    ].join('\\n');
+    ].join('\n');
     const mailto = `mailto:${teamEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
     setSubmitted(true);
