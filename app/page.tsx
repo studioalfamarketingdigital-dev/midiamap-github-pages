@@ -1,5 +1,7 @@
 import Inventory from '../components/Inventory';
 import ProgrammaticAI from '../components/ProgrammaticAI';
+import SiteHeader from '../components/SiteHeader';
+import SiteFooter from '../components/SiteFooter';
 
 const mediaTypes = [
   { icon: '▰', title: 'Outdoor', text: 'Grandes formatos em ruas e avenidas.' },
@@ -25,22 +27,14 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <header className="site-header">
-        <div className="container nav">
-          <a className="brand" href="#top" aria-label="MídiaMap início">Mídia<span>Map</span></a>
-          <nav className="nav-links" aria-label="Navegação principal">
-            <a href="#inventario">Inventário</a><a href="#midias">Mídias</a><a href="#programatica">Programática</a><a href="#anuncie">Anuncie</a><a href="#cadastro">Seja parceiro</a>
-          </nav>
-          <div className="nav-actions"><a className="button button-green" href="#anuncie">Quero anunciar</a></div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main id="top">
         <section className="hero container">
           <div className="hero-copy">
             <span className="eyebrow"><span className="eyebrow-dot" /> MARKETPLACE DE MÍDIA</span>
             <h1>Sua marca.<br /><em>Onde importa.</em></h1>
-            <p className="hero-lead">Encontre espaços de mídia para sua campanha. Compare formatos e regiões e solicite uma cotação com nossa equipe.</p>
+            <p className="hero-lead">MídiaMap é um marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT, que atende Brasília, Goiânia, Luziânia e entorno. Encontre espaços de mídia, compare formatos e solicite uma cotação.</p>
             <form className="hero-search" action="/#inventario" method="get"><span className="search-icon">⌕</span><input className="hero-search-input" type="search" name="q" placeholder="Digite cidade, bairro ou tipo de mídia" aria-label="Buscar mídia por cidade, bairro ou formato" /><button className="button button-dark" type="submit">Buscar mídia <span>↗</span></button></form>
             <div className="hero-meta"><span>✓ Fornecedores identificados</span><span>✓ Cotação por escrito</span><span>✓ Proposta sob medida</span></div>
           </div>
@@ -91,7 +85,7 @@ export default function Home() {
         <section className="owner-section" id="cadastro"><div className="container owner-inner"><div><span className="eyebrow">PARA DONOS DE MÍDIA</span><h2>Tem um espaço<br /><span>publicitário?</span></h2><p>É proprietário ou representante de um veículo? Apresente seus formatos, praças, tabela comercial e dados de audiência para nossa equipe avaliar uma parceria.</p></div><a className="button button-dark" href="mailto:studioalfamktag@bol.com.br?subject=Cadastro de veículo de mídia no MídiaMap&body=Olá! Quero cadastrar meu veículo de mídia na base da MídiaMap.\n\nNome do veículo/empresa:\nCidade/UF:\nFormatos disponíveis:\nContato comercial:\nTabela e mídia kit (anexar):">Quero ser fornecedor ↗</a></div></section>
       </main>
 
-      <footer className="footer"><div className="container footer-main"><div className="footer-about"><a className="brand footer-brand" href="#top">Mídia<span>Map</span></a><p>Conectamos anunciantes a oportunidades de mídia. Encontre formatos, compare regiões e solicite propostas para suas campanhas.</p><a className="footer-company-link" href="https://studioalfamkt.online/" target="_blank" rel="noopener noreferrer">Uma plataforma da <strong>STUDIOALFAMKT</strong> <span>↗</span></a></div><div className="footer-col"><b>PLATAFORMA</b><a href="#inventario">Inventário</a><a href="#midias">Mídias</a><a href="#anuncie">Anuncie</a><a href="#cadastro">Seja parceiro</a></div><div className="footer-col"><b>STUDIOALFAMKT</b><a href="https://studioalfamkt.online/" target="_blank" rel="noopener noreferrer">Site institucional ↗</a><a href="mailto:studioalfamktag@bol.com.br">Contato</a></div><div className="footer-col"><b>FORMATOS</b><a href="#inventario">Outdoor</a><a href="#inventario">DOOH</a><a href="#inventario">LED</a><a href="#inventario">Indoor</a></div></div><div className="container footer-bottom"><span>© 2026 MídiaMap. Todos os direitos reservados.</span><span>Desenvolvido e operado por <a href="https://studioalfamkt.online/" target="_blank" rel="noopener noreferrer">STUDIOALFAMKT</a>.</span></div></footer>
+      <SiteFooter />
     </>
   );
 }
