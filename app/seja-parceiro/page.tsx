@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import InfoPage from '../../components/InfoPage';
+export const metadata:Metadata={title:'Seja parceiro | Cadastre seu espaço de mídia',description:'Apresente seu inventário de outdoor, painel LED, DOOH, indoor, TV, rádio ou mídia impressa.',alternates:{canonical:'/seja-parceiro/'}};
+export default function Page(){return <InfoPage eyebrow="PARA PROPRIETÁRIOS E OPERADORES" title="Cadastre seu inventário de mídia." description="Envie nome do veículo, cidade, endereço ou referência, formato, medidas, fotos, tabela comercial e contato responsável para studioalfamktag@bol.com.br. O envio não garante publicação: as informações passam por avaliação e confirmação."/>}
