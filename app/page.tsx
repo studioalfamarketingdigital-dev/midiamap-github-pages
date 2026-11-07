@@ -1,7 +1,5 @@
 import Inventory from '../components/Inventory';
 import ProgrammaticAI from '../components/ProgrammaticAI';
-import SiteHeader from '../components/SiteHeader';
-import SiteFooter from '../components/SiteFooter';
 
 const mediaTypes = [
   { icon: '▰', title: 'Outdoor', text: 'Grandes formatos em ruas e avenidas.' },
@@ -27,8 +25,6 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <SiteHeader />
-
       <main id="top">
         <section className="hero container">
           <div className="hero-copy">
@@ -85,7 +81,6 @@ export default function Home() {
         <section className="owner-section" id="cadastro"><div className="container owner-inner"><div><span className="eyebrow">PARA DONOS DE MÍDIA</span><h2>Tem um espaço<br /><span>publicitário?</span></h2><p>É proprietário ou representante de um veículo? Apresente seus formatos, praças, tabela comercial e dados de audiência para nossa equipe avaliar uma parceria.</p></div><a className="button button-dark" href="mailto:studioalfamktag@bol.com.br?subject=Cadastro de veículo de mídia no MídiaMap&body=Olá! Quero cadastrar meu veículo de mídia na base da MídiaMap.\n\nNome do veículo/empresa:\nCidade/UF:\nFormatos disponíveis:\nContato comercial:\nTabela e mídia kit (anexar):">Quero ser fornecedor ↗</a></div></section>
       </main>
 
-      <SiteFooter />
     </>
   );
 }
