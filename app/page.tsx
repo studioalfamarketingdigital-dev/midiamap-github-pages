@@ -32,7 +32,7 @@ export default function Home() {
             <h1>Sua marca.<br /><em>Onde importa.</em></h1>
             <p className="hero-lead">MídiaMap é um marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT, que atende Brasília, Goiânia, Luziânia e entorno. Encontre espaços de mídia, compare formatos e solicite uma cotação.</p>
             <form className="hero-search" action="/#inventario" method="get"><span className="search-icon">⌕</span><input className="hero-search-input" type="search" name="q" placeholder="Digite cidade, bairro ou tipo de mídia" aria-label="Buscar mídia por cidade, bairro ou formato" /><button className="button button-dark" type="submit">Buscar mídia <span>↗</span></button></form>
-            <div className="hero-meta"><span>✓ Fornecedores identificados</span><span>✓ Cotação por escrito</span><span>✓ Proposta sob medida</span></div>
+            <div className="hero-meta"><span>✓ Referências públicas de mídia</span><span>✓ Cotação por escrito</span><span>✓ Proposta sob medida</span></div>
           </div>
           <div className="hero-visual"><div className="hero-visual-orbit"><span>OOH</span><span>DOOH</span><span>LED</span><b>Mídia<br/>em todo<br/>lugar.</b></div></div>
         </section>
