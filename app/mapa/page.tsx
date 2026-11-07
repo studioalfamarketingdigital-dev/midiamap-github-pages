@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import Inventory from '../../components/Inventory';
+export const metadata:Metadata={title:'Mapa de mídia OOH e DOOH',description:'Explore no mapa referências de espaços publicitários por localização e formato.',alternates:{canonical:'/mapa/'}};
+export default function Page(){return <main className="section container"><span className="eyebrow">MAPA DE MÍDIA</span><h1>Encontre mídia por localização</h1><p>O mapa apresenta pontos de referência do inventário público. Confirme condições e disponibilidade antes de contratar.</p><Inventory/></main>}
