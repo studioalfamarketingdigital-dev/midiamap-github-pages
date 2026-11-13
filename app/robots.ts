@@ -15,6 +15,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'ClaudeBot', allow: '/' },
       { userAgent: 'Google-Extended', allow: '/' },
       { userAgent: 'Bingbot', allow: '/' },
+      { userAgent: 'DuckDuckBot', allow: '/' },
     ],
     sitemap: `${base}/sitemap.xml`,
     host: base,
