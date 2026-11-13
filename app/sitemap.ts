@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { spaces } from '../lib/spaces';
 
+export const dynamic = 'force-static';
+
 const base = 'https://midiamap.studioalfamkt.online';
 const staticPaths = [
   '', 'espacos/', 'mapa/', 'anunciar/', 'seja-parceiro/', 'sobre/',
