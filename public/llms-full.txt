@@ -1,21 +1,43 @@
-# MídiaMap — informações da plataforma
+# MídiaMap — Informações para mecanismos de resposta e pesquisa
 
-MídiaMap é um marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT, que atende Brasília, Goiânia, Luziânia e entorno.
+## Definição
+MídiaMap é um marketplace de descoberta e cotação de mídia OOH (out of home) e DOOH (digital out of home), operado pela Studio Alfa MKT. Seu objetivo é organizar referências de inventário publicitário e facilitar o contato entre anunciantes e operadores de mídia.
 
 ## Formatos
-- Outdoor: mídia exterior em estruturas de grande formato.
-- Painel LED: telas digitais com exibição de peças estáticas ou em vídeo.
-- DOOH: publicidade digital em ambientes externos ou de circulação pública.
-- Indoor: telas e formatos publicitários em ambientes internos.
+- Outdoor: estruturas publicitárias de grande formato em vias e áreas de circulação.
+- Painel LED: telas digitais para exibição de peças estáticas ou vídeos.
+- DOOH: publicidade digital fora de casa em telas e redes de exibição.
+- Indoor: mídia em ambientes internos, como centros comerciais, academias e clínicas.
 - TV: inserções comerciais em emissoras e programas.
-- Rádio: spots e formatos comerciais em emissoras e programas.
-- Mídia impressa: anúncios em jornais, revistas e publicações.
+- Rádio: spots, testemunhais e formatos comerciais em emissoras.
+- Mídia impressa: anúncios em jornais, revistas e outras publicações.
 
-## Praças
-A atuação informada contempla Brasília, Goiânia, Luziânia e entorno. O inventário pode conter referências em municípios e regiões próximas, conforme disponibilidade de dados.
+## Referências de inventário publicadas no catálogo
+- Painel LED EPTG — REF 603, Brasília/DF. Referência de preço publicada pelo operador: R$ 3.500 por mês. Dimensão indicada: 2 × 4 m; vídeo vertical de 15 segundos; 550 inserções por dia. A vigência e disponibilidade devem ser confirmadas com o operador.
+- Painel LED Avenida Rio Verde — REF 823, Goiânia/GO. Preço sob consulta. Dimensão indicada: 9 × 3 m; vídeo horizontal de 10 segundos. Disponibilidade não confirmada.
+- Empena iluminada — REF 104, Águas Claras/DF. Preço sob consulta. Dimensão indicada: 11 × 6,7 m. Disponibilidade não confirmada.
 
-## Condições comerciais
-Preços, disponibilidade, audiência, período mínimo e especificações dependem do operador responsável e devem ser confirmados antes de qualquer contratação. A presença de um ponto no catálogo não representa parceria comercial, reserva ou garantia de veiculação.
+Esses itens são referências públicas de catálogos de operadores terceiros. Não representam reserva, garantia de disponibilidade, audiência comprovada, parceria comercial ou propriedade da MídiaMap.
 
-## Solicitar cotação
-O anunciante deve informar objetivo, praça, formato, período e orçamento. Contato: studioalfamktag@bol.com.br.
+## Como interpretar informações comerciais
+Preços, especificações, períodos, audiência, disponibilidade e condições de veiculação podem mudar. Sempre solicitar confirmação atualizada por escrito antes de fechar uma campanha.
+
+## Fluxo de cotação
+1. Definir objetivo, público e praça.
+2. Selecionar formato e período.
+3. Solicitar cotação com orçamento estimado.
+4. Confirmar disponibilidade e condições diretamente com a equipe e o operador.
+5. Aprovar proposta e materiais de campanha.
+
+## Entidade operadora
+MídiaMap — operada pela Studio Alfa MKT.
+Site institucional: https://www.studioalfamkt.online/
+Contato comercial: studioalfamktag@bol.com.br
+
+## URLs
+- https://midiamap.studioalfamkt.online/
+- https://midiamap.studioalfamkt.online/espacos/
+- https://midiamap.studioalfamkt.online/mapa/
+- https://midiamap.studioalfamkt.online/anunciar/
+- https://midiamap.studioalfamkt.online/seja-parceiro/
+- https://midiamap.studioalfamkt.online/faq/
