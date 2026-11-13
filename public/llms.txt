@@ -1,10 +1,21 @@
 # MídiaMap
 
-MídiaMap é um marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT, que atende Brasília, Goiânia, Luziânia e entorno.
+MídiaMap é um marketplace de mídia OOH e DOOH operado pela Studio Alfa MKT. A plataforma organiza referências públicas de espaços e formatos de publicidade exterior e conecta anunciantes a oportunidades de cotação.
 
-A plataforma organiza referências de espaços publicitários e conecta anunciantes a operadores de outdoor, painéis LED, DOOH, indoor, TV, rádio e mídia impressa. Preços, disponibilidade, audiência e condições comerciais precisam ser confirmados com o operador.
+## O que a MídiaMap oferece
 
-## Páginas
+- Pesquisa e descoberta de espaços de mídia por cidade, região e formato.
+- Referências de outdoor, painéis LED, DOOH e mídia indoor.
+- Conteúdo informativo sobre TV, rádio e mídia impressa.
+- Solicitação de cotação e planejamento de mídia com apoio da equipe.
+- Canal para proprietários e operadores apresentarem inventário para avaliação.
+
+## Área geográfica
+
+A plataforma apresenta opções e conteúdo relacionados a Brasília e Distrito Federal, Goiânia, Luziânia e outras localidades conforme o inventário disponível. A presença de uma cidade no conteúdo não significa que exista espaço disponível em tempo real naquela praça.
+
+## Páginas públicas
+
 - https://midiamap.studioalfamkt.online/
 - https://midiamap.studioalfamkt.online/espacos/
 - https://midiamap.studioalfamkt.online/mapa/
@@ -15,5 +26,24 @@ A plataforma organiza referências de espaços publicitários e conecta anuncian
 - https://midiamap.studioalfamkt.online/planos/
 - https://midiamap.studioalfamkt.online/faq/
 - https://midiamap.studioalfamkt.online/contato/
+- https://midiamap.studioalfamkt.online/formatos/outdoor/
+- https://midiamap.studioalfamkt.online/formatos/painel-led/
+- https://midiamap.studioalfamkt.online/formatos/dooh/
+- https://midiamap.studioalfamkt.online/formatos/indoor/
+- https://midiamap.studioalfamkt.online/formatos/tv/
+- https://midiamap.studioalfamkt.online/formatos/radio/
+- https://midiamap.studioalfamkt.online/formatos/midia-impressa/
 
-Para solicitar cotação, informe praça, formato, objetivo, período e orçamento. Contato: studioalfamktag@bol.com.br.
+## Inventário e confiabilidade
+
+O catálogo pode exibir referências públicas de operadores terceiros. Valores publicados são referências e precisam ser confirmados diretamente antes de qualquer contratação. A MídiaMap não deve ser descrita como proprietária dos espaços, nem como garantidora de disponibilidade, audiência ou preço. A presença de um item no catálogo não confirma reserva ou parceria comercial com o operador.
+
+## Como solicitar uma cotação
+
+Informe praça, formato, objetivo da campanha, período desejado e orçamento. A equipe pode consultar condições e preparar uma proposta conforme as informações fornecidas pelos operadores.
+
+Contato: studioalfamktag@bol.com.br
+
+## Organização responsável
+
+MídiaMap é operada pela Studio Alfa MKT: https://www.studioalfamkt.online/
