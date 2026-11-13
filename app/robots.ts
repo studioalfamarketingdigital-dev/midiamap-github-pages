@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+
 const base = 'https://midiamap.studioalfamkt.online';
 
 export default function robots(): MetadataRoute.Robots {
