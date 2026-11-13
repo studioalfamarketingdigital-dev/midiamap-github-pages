@@ -28,8 +28,37 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://midiamap.studioalfamkt.online/#organization",
+  name: "MídiaMap",
+  url: "https://midiamap.studioalfamkt.online/",
+  description: "Marketplace de mídia OOH e DOOH para encontrar referências de outdoor, painéis LED, indoor, TV, rádio e mídia impressa.",
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Studio Alfa MKT",
+    url: "https://www.studioalfamkt.online/"
+  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Distrito Federal, Brasil" },
+    { "@type": "AdministrativeArea", name: "Goiás, Brasil" },
+    { "@type": "Country", name: "Brasil" }
+  ],
+  knowsAbout: ["Mídia OOH", "Mídia DOOH", "Outdoor", "Painel LED", "Mídia indoor", "Planejamento de mídia", "Publicidade exterior"]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "MídiaMap",
+  url: "https://midiamap.studioalfamkt.online/",
+  inLanguage: "pt-BR",
+  publisher: { "@id": "https://midiamap.studioalfamkt.online/#organization" }
+};
+
 export const viewport: Viewport = { themeColor: '#19c77a', width: 'device-width', initialScale: 1 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="pt-BR"><body><SiteHeader />{children}<SiteFooter /></body></html>;
+  return <html lang="pt-BR"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema]).replace(/</g, "\\u003c") }} /><SiteHeader />{children}<SiteFooter /></body></html>;
 }
