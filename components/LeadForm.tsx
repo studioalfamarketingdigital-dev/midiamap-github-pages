@@ -45,7 +45,7 @@ export default function LeadForm({ kind }: { kind: Kind }) {
           contact_phone: form.phone.trim(),
           campaign_city: form.city.trim(),
           campaign_state: form.state.trim().toUpperCase(),
-          desired_format: form.format,
+          desired_format: form.format || (kind === 'contact' ? 'Contato geral' : ''),
           budget: form.budget.trim() ? Number(form.budget.trim().replace(/[^\d,]/g, '').replace(',', '.')) : null,
           message: [form.objective && 'Objetivo: ' + form.objective, form.period && 'Período: ' + form.period, form.message && 'Detalhes: ' + form.message].filter(Boolean).join('\n'),
           status: 'new'
@@ -54,7 +54,7 @@ export default function LeadForm({ kind }: { kind: Kind }) {
       }
       setSuccess(kind === 'supplier'
         ? 'Cadastro enviado! Nossa equipe vai avaliar as informações e entrar em contato.'
-        : 'Briefing recebido com sucesso! Nossa equipe comercial vai analisar seu pedido.');
+        : kind === 'contact' ? 'Mensagem recebida com sucesso! Nossa equipe vai retornar pelo contato informado.' : 'Briefing recebido com sucesso! Nossa equipe comercial vai analisar seu pedido.');
       setForm({ name: '', company: '', email: '', phone: '', city: '', state: 'GO', objective: '', format: '', period: '', budget: '', message: '', website: '', address: '', dimensions: '', price: '' });
     } catch (e) {
       const message = e instanceof Error ? e.message : 'Não foi possível enviar agora.';
