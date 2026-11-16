@@ -78,7 +78,7 @@ export default function Home() {
 
         <section className="programmatic-section" id="programatica"><div className="container"><ProgrammaticAI /></div></section>
 
-        <section className="owner-section" id="cadastro"><div className="container owner-inner"><div><span className="eyebrow">PARA DONOS DE MÍDIA</span><h2>Tem um espaço<br /><span>publicitário?</span></h2><p>É proprietário ou representante de um veículo? Apresente seus formatos, praças, tabela comercial e dados de audiência para nossa equipe avaliar uma parceria.</p></div><a className="button button-dark" href="mailto:studioalfamktag@bol.com.br?subject=Cadastro de veículo de mídia no MídiaMap&body=Olá! Quero cadastrar meu veículo de mídia na base da MídiaMap.\n\nNome do veículo/empresa:\nCidade/UF:\nFormatos disponíveis:\nContato comercial:\nTabela e mídia kit (anexar):">Quero ser fornecedor ↗</a></div></section>
+        <section className="owner-section" id="cadastro"><div className="container owner-inner"><div><span className="eyebrow">PARA DONOS DE MÍDIA</span><h2>Tem um espaço<br /><span>publicitário?</span></h2><p>É proprietário ou representante de um veículo? Apresente seus formatos, praças, tabela comercial e dados de audiência para nossa equipe avaliar uma parceria.</p></div><a className="button button-dark" href="/seja-parceiro/">Quero ser fornecedor ↗</a></div></section>
       </main>
 
     </>
