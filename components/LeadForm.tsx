@@ -82,7 +82,7 @@ export default function LeadForm({ kind }: { kind: Kind }) {
           <label>Dimensões / especificações<input value={form.dimensions} onChange={e => update('dimensions', e.target.value)} /></label>
           <label>Tabela comercial / preço<input value={form.price} onChange={e => update('price', e.target.value)} /></label>
         </> : <>
-          {!contact && <label>Formato de interesse *<select required value={form.format} onChange={e => update('format', e.target.value)}><option value="">Selecione</option>{formats.map(f => <option key={f}>{f}</option>}</select></label>}
+          {!contact && <label>Formato de interesse *<select required value={form.format} onChange={e => update('format', e.target.value)}><option value="">Selecione</option>{formats.map(f => <option key={f}>{f}</option>)}</select></label>}
           {!contact && <label>Orçamento estimado<input value={form.budget} onChange={e => update('budget', e.target.value)} placeholder="Ex.: R$ 5.000" /></label>}
           {!contact && <label>Período desejado<input value={form.period} onChange={e => update('period', e.target.value)} placeholder="Ex.: dezembro/2026" /></label>}
           <label className="lead-form-wide">{contact ? 'Assunto' : 'Objetivo da campanha'}<input value={form.objective} onChange={e => update('objective', e.target.value)} placeholder={contact ? 'Como podemos ajudar?' : 'Ex.: divulgar inauguração, gerar visitas...'}/></label>
