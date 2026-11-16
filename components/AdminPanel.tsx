@@ -3,8 +3,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 type Row = Record<string, any>;
-const url = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || '';
+const url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://prsjdnvqaskkeorxnqcc.supabase.co';
+const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_cI3ov1KRTrhPCmP87U_Rwg_UjufQ4X7';
 const tabs = ['Visão geral','Orçamentos','Mídias','Fornecedores','Anunciantes'] as const;
 type Tab = typeof tabs[number];
 const labels:Record<string,string>={new:'Novo',contacted:'Em contato',proposal_sent:'Proposta enviada',negotiating:'Negociação',won:'Fechado',lost:'Perdido',cancelled:'Cancelado',pending:'Pendente',active:'Ativo',inactive:'Inativo',draft:'Rascunho',published:'Publicado',paused:'Pausado',archived:'Arquivado',to_confirm:'A confirmar',available:'Disponível',unavailable:'Indisponível',reserved:'Reservado'};
