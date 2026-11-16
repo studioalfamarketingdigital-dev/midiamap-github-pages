@@ -287,3 +287,19 @@
   .nav-actions .button{padding:10px 11px}
   .mobile-menu-toggle{width:38px;height:38px}
 }
+
+
+/* Formulários de captação integrados ao CRM */
+.lead-form{margin:34px 0 0;max-width:860px;padding:clamp(20px,4vw,34px);border:1px solid #e2e9e4;border-radius:22px;background:#fff;box-shadow:0 18px 50px rgba(20,45,32,.06)}
+.lead-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.lead-form label{display:flex;flex-direction:column;gap:8px;color:#25352d;font-size:13px;font-weight:700}
+.lead-form input,.lead-form select,.lead-form textarea{width:100%;min-height:48px;padding:12px 14px;border:1px solid #d8e1db;border-radius:10px;background:#fbfdfb;color:#18231d;font:inherit;font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s}
+.lead-form textarea{resize:vertical;min-height:110px}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{border-color:#19b975;box-shadow:0 0 0 3px rgba(25,185,117,.12)}
+.lead-form-wide{grid-column:1/-1}
+.lead-form-privacy{margin:18px 0;color:#77847c;font-size:12px;line-height:1.6}
+.lead-form-error,.lead-form-success{margin:16px 0 0;padding:13px 15px;border-radius:10px;font-size:14px;line-height:1.5}
+.lead-form-error{background:#fff0ef;color:#a52b24}
+.lead-form-success{background:#eaf9f1;color:#11643d}
+.lead-form button:disabled{opacity:.65;cursor:wait}
+@media(max-width:640px){.lead-form{padding:18px;border-radius:16px}.lead-form-grid{grid-template-columns:1fr;gap:14px}.lead-form-wide{grid-column:auto}}
