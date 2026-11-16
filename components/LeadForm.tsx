@@ -46,7 +46,7 @@ export default function LeadForm({ kind }: { kind: Kind }) {
           campaign_city: form.city.trim(),
           campaign_state: form.state.trim().toUpperCase(),
           desired_format: form.format,
-          budget: form.budget.trim() ? Number(form.budget.trim().replace(/[^\\d,]/g, '').replace(',', '.')) : null,
+          budget: form.budget.trim() ? Number(form.budget.trim().replace(/[^\d,]/g, '').replace(',', '.')) : null,
           message: [form.objective && 'Objetivo: ' + form.objective, form.period && 'Período: ' + form.period, form.message && 'Detalhes: ' + form.message].filter(Boolean).join('\n'),
           status: 'new'
         });
