@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import InfoPage from '../../components/InfoPage';
+import LeadForm from '../../components/LeadForm';
 
 export const metadata: Metadata = {
   title: 'Anuncie | Solicite cotação de mídia',
@@ -8,11 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const subject = encodeURIComponent('Briefing de campanha — MídiaMap');
-  const body = encodeURIComponent('Olá, equipe MídiaMap! Quero planejar uma campanha.\n\nNome:\nEmpresa:\nWhatsApp:\nCidade/UF:\nObjetivo:\nFormatos de interesse:\nPeríodo:\nOrçamento estimado:\nObservações:');
   return (
     <InfoPage eyebrow="PARA ANUNCIANTES" title="Sua campanha começa com uma boa escolha de mídia." description="Informe região, formato e objetivo da campanha. A equipe pesquisa opções e retorna com condições comerciais após validar disponibilidade com os operadores.">
-      <a className="button button-green" href={`mailto:studioalfamktag@bol.com.br?subject=${subject}&body=${body}`}>Enviar briefing de campanha ↗</a>
+      <LeadForm kind="quote" />
     </InfoPage>
   );
 }
